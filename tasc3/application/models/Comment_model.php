@@ -14,7 +14,7 @@ class Comment_model extends CI_Model {
         return $query->result_array();
     }
 
-    public function get_current_page_records($limit, $start) 
+    public function get_current($limit, $start) 
     {
         $this->db->limit($limit, $start);
         $this->db->order_by('id', 'DESC');

@@ -3,26 +3,27 @@
 
 <head>
     <title>COMMENT</title>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style.css">
 </head>
-
 
 <body>
     <div class="container">
-        <h1 id='form_head'>Comment Listing</h1>
-        <h1>CREATE COMMENT</h1>
+        <div class = 'title'>
+            <h1 id='form_head'>Comment Listing</h1>
+            <h2>CREATE COMMENT</h1>
+        </div>
         <?php echo validation_errors(); ?>
-        <?php echo form_open('http://codeigniter3-example/comment/index'); ?>
-            <p>NAME</p>
-            <input type="text" name='name'>
-            <p> EMAIL</p>
-            <input required type="email" name='email'>
-            <p> COMMENT</p>
-            <textarea required type = "textarea " name="comment" placeholder = "Сomment" rows="3" cols="22"></textarea><br><br>
-            <button type='submit'>CREATE</button>
+        <?php echo form_open('comment/create'); ?>
+        <div class='box-input'>
+            <input class='name' type="text" name='name' placeholder='Name'>
+            <input class='email' required type="email" name='email' placeholder='Email'>
+            <textarea class='message' required type="textarea " name="comment" placeholder="Сomment" rows="3" cols="22"></textarea><br><br>
+            <button class='btn' type='submit'>CREATE</button>
+        </div>
         <?php echo form_close(); ?>
 
         <?php if (isset($results)) { ?>
-            <table border="1" cellpadding="0" cellspacing="0" >
+            <table border="1" cellpadding="0" cellspacing="0">
                 <tr>
                     <th>Name</th>
                     <th>Email</th>
