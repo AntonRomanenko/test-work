@@ -194,7 +194,7 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
--- Выводим переписку 4 чата
+-- 4 Выводим переписку пользователя 1
 SELECT * FROM `chat` 
 LEFT JOIN user_chat ON chat.id = user_chat.chat_id
 LEFT JOIN user ON user.id = user_chat.user_id
